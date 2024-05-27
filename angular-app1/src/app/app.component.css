@@ -1,0 +1,137 @@
+header{
+        color: gray;
+}
+#Nombre{
+  width: 50%;
+  height: auto;
+}
+hr{
+  border-top: 10px solid red;
+}
+h1{
+  color: gray;
+  background-color: white;
+}
+footer{
+  width: 101%;
+  height: 50px;
+  background-image: url(https://1.bp.blogspot.com/-M7L-6DG08QA/Vf-Iguz1pnI/AAAAAAAACZI/3C_7_SOZI-Q/s1600/Captura%2Bde%2Bpantalla%2B2015-09-20%2B23.27.07.png);
+  background-size: 100% 150px;
+  margin-top: 50px;
+  color:black;
+}
+.h6{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Encabezado{
+  width: 100%;
+  height: 150px;
+  background-image: url(./imagenes/headerHouse.png);
+  background-size: 100% 150px;
+}
+img{
+    width: 140px;
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.Carta{
+    border: 5px solid darkblue ;
+    width: 250px;
+    height: auto;
+    background-image: url(https://e0.pxfuel.com/wallpapers/726/915/desktop-wallpaper-anime-scenery-dragon-ball-z-scenery.jpg);
+}
+.texto1{
+    background-color: white;
+}
+h4 {
+text-align: center;
+color: red;
+}
+.h5{
+  background-color:#9EA1A8;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  padding: 5px 0px;
+}
+
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+  }
+
+  .read-more{
+    display: block;
+    margin: 0 auto;
+    background-color: #2C9EF5 ;
+    color: white;
+  }
+  .read-more:hover{
+    background-color: orange;
+  }
+
+  .proximo{
+    background-color: #ff8400;
+    color: #ff0000;
+    font-weight: 1000;
+    border: 4px solid black;
+  }
+  .proximo:hover{
+    background-color: #ffcd36;
+    font-weight: 1000;
+
+  }
+  .nav1{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @media screen and (max-width: 900px) {
+    .Encabezado{
+      background-size: 100% 120px;
+      height: 120px;
+    }
+    footer{
+      background-size: 100% 120px;
+      height: 50px;
+    }
+    h1{
+      font-size: xx-large;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .Encabezado{
+      background-size: 100% 90px;
+      height: 60px;
+    }
+    footer{
+      background-size: 100% 90px;
+      height: 30px;
+    }
+    h1{
+      font-size:x-large;
+    }
+  }
+
+  @media screen and (max-width: 470px) {
+    .Encabezado{
+      background-size: 100% 60px;
+      height: 60px;
+    }
+    footer{
+      background-size: 100% 60px;
+      height: 60px;
+    }
+    h1{
+      font-size: medium;
+    }
+  }

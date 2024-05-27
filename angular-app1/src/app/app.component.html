@@ -1,2 +1,65 @@
-<p>Hola mundo</p>
+<header class="text-center" my-5>
+  <div class="Encabezado"></div>
+  <img id="Nombre" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/677b7403-76bf-4871-b1eb-996331c62c03/d4ndxuz-eb645527-92db-49b1-b62a-35d85f2a9647.png/v1/fill/w_800,h_301/logo___dragon_ball_merchandising_original_by_vicdbz_d4ndxuz-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzAxIiwicGF0aCI6IlwvZlwvNjc3Yjc0MDMtNzZiZi00ODcxLWIxZWItOTk2MzMxYzYyYzAzXC9kNG5keHV6LWViNjQ1NTI3LTkyZGItNDliMS1iNjJhLTM1ZDg1ZjJhOTY0Ny5wbmciLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.r8_0glDJYLu1B4jhLkY8TJzeABSizpyDYZB7DTJj8mE" alt="">  
+  <hr>
+  <div class="nav1">
+    <button class="btn btn-sm proximo" (click)="hojaAnterior()">Anterior</button>
+    <h1>API de personajes de Dragon Ball Z</h1>
+    <button class="btn btn-sm proximo" (click)="hojaSiguiente()">Siguiente</button>
+  </div>
+  
+  <hr>
+  </header>
+<main class="container d-flex flex-wrap justify-content-center gap-5">
+      @for(elemento of datos; track elemento.id){
+        <div class="card Carta" style="width: 18rem;">
+            @if(elemento.name === "Goku"){
+              <img src="https://i0.wp.com/eltallerdehector.com/wp-content/uploads/2022/08/Goku-png.png?resize=800%2C800&ssl=1" class="card-img-top" alt="foto de {{elemento.name}}">
+            } @else if (elemento.name === "Vegeta") {
+              <img src="https://i0.wp.com/eltallerdehector.com/wp-content/uploads/2022/08/Vegeta-Ultra-Ego-png.png?resize=768%2C768&ssl=1" class="card-img-top" alt="foto de {{elemento.name}}">
+            } @else {
+            <img src="{{elemento.image}}" class="card-img-top" alt="foto de {{elemento.name}}">
+            }
+            <div class="card-body texto1">
+              <h4 class="card-title">{{elemento.name}}</h4>
+              <h5 class="card-text h5">Ki: {{elemento.ki}}</h5>
+              @if(elemento.race === "Saiyan"){
+                <h5 class="card-text h5">Raza: Saiyajin</h5>  
+              } @else if(elemento.race === "Namekian"){
+                <h5 class="card-text h5">Raza: Namekiano</h5> 
+              } @else if(elemento.race === "Human"){
+                <h5 class="card-text h5">Raza: Humano</h5> 
+              } @else if(elemento.race === "Frieza Race"){
+                <h5 class="card-text h5">Raza: Alienigena</h5> 
+              } @else if(elemento.race === "Android"){
+                <h5 class="card-text h5">Raza: Androide</h5> 
+              } @else if(elemento.race === "God"){
+                <h5 class="card-text h5">Raza: dios</h5> 
+              } @else if(elemento.race === "Majin"){
+                <h5 class="card-text h5">Raza: Mago</h5> 
+              } @else {
+                <h5 class="card-text h5">Raza: {{elemento.race}}</h5> 
+              }
+              <p class="card-text" *ngIf="pocoDescripcion">{{elemento.description}}</p>
+              <p *ngIf="fullDescripcion">{{elemento.description}}</p>
+              @if(elemento.description.length > 200){
+                <button class="btn btn-sm read-more" (click)="leerMas()">
+                  <h6 *ngIf="pocoDescripcion" >Leer más</h6>
+                  <h6 *ngIf="fullDescripcion" >Leer menos</h6>
+                </button>
+              }
+          </div>
+          </div>
+      }
+</main>
+<hr>
+<div class="nav1">
+  <button class="btn btn-sm proximo" (click)="hojaAnterior()"> Anterior </button>
+  <h1>API de personajes de Dragon Ball Z</h1>
+  <button class="btn btn-sm proximo" (click)="hojaSiguiente()"> Siguiente </button>
+</div>
+<hr>
+<footer class="text-center ">
+  <h6 class="h6"> Copyright David Sierra API Dragon Ball </h6>
+</footer>
 <!-- <router-outlet> </router-outlet> -->
